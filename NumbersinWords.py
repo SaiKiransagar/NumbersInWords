@@ -34,7 +34,7 @@ def output(i):
         out += calculate(((i//100000)%1000),'Lakh ')
         out += calculate((i//1000)%100,'Thousand ')
         out += calculate(((i//100)%10),'Hundred ')
-        if (i>100):
+        if (i>100) and len(calculate(i%100,''))>1:
             out+= 'and '
         out += calculate(i%100,'')
         return out
